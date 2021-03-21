@@ -24,3 +24,14 @@ pushBtn.addEventListener("click", function(){
     }
 
 })
+
+const unshiftBtn = document.getElementById("unshift-btn")
+unshiftBtn.addEventListener("click", function(){
+    const emojiInput = document.getElementById("emoji-input")
+    if (emojiInput.value){
+        myEmojis.shift(emojiInput.value)
+        emojiInput = ''
+        emojiContainer.innerHTML = ""
+        renderEmojis()
+    }
+})
